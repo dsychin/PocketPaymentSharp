@@ -12,5 +12,19 @@
             this.secret = secret;
             this.platform = platform;
         }
+
+        // TODO: add proper response object
+        public string CheckAuth()
+        {
+            // build request
+            var payload = new RequestPayload(platform, clientId);
+            payload.GenerateSignature(secret);
+
+            var jsonPayload = payload.GetJson();
+            // submit request
+
+            // print response
+            return jsonPayload;
+        }
     }
 }
