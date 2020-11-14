@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PocketPaymentSharp", "PocketPaymentSharp\PocketPaymentSharp.csproj", "{2F5158F0-E9B0-42B2-BE09-A5BB805E62B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples", "Samples\Samples.csproj", "{547D3C25-8B10-443A-AB8C-A9A51763D5C5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples", "Samples\Samples.csproj", "{C859E2B2-FBA5-4D02-96A4-848BFDDB3AA8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{2F5158F0-E9B0-42B2-BE09-A5BB805E62B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F5158F0-E9B0-42B2-BE09-A5BB805E62B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F5158F0-E9B0-42B2-BE09-A5BB805E62B9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{547D3C25-8B10-443A-AB8C-A9A51763D5C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{547D3C25-8B10-443A-AB8C-A9A51763D5C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{547D3C25-8B10-443A-AB8C-A9A51763D5C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{547D3C25-8B10-443A-AB8C-A9A51763D5C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C859E2B2-FBA5-4D02-96A4-848BFDDB3AA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C859E2B2-FBA5-4D02-96A4-848BFDDB3AA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C859E2B2-FBA5-4D02-96A4-848BFDDB3AA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C859E2B2-FBA5-4D02-96A4-848BFDDB3AA8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
