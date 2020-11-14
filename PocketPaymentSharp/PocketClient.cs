@@ -18,13 +18,14 @@
         {
             // build request
             var payload = new RequestPayload(platform, clientId);
+            payload.Request.Header.Service = "security.checkauth";
             payload.GenerateSignature(secret);
 
             var jsonPayload = payload.GetJson();
             // submit request
 
             // print response
-            return jsonPayload;
+            return jsonPayload; // return json for debugging
         }
     }
 }

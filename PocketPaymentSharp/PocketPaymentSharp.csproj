@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <PackageReference Include="System.Text.Json" Version="5.0.0" />
+    <PackageReference Include="TimeZoneConverter" Version="3.3.0" />
   </ItemGroup>
 
 </Project>

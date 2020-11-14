@@ -1,5 +1,6 @@
 using System.Text.Json.Serialization;
 using System;
+using TimeZoneConverter;
 
 namespace PocketPaymentSharp
 {
@@ -28,7 +29,7 @@ namespace PocketPaymentSharp
 
             // set request time
             var utcTime = DateTime.UtcNow;
-            var sstTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Singapore Standard Time");
+            var sstTimeZone = TZConvert.GetTimeZoneInfo("Singapore Standard Time");
             this.RequestTime = TimeZoneInfo.ConvertTimeFromUtc(utcTime, sstTimeZone)
                 .ToString("yyyy-MM-ddTHH:mm:ff");
         }

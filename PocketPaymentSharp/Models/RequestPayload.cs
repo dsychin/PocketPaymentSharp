@@ -20,7 +20,11 @@ namespace PocketPaymentSharp
         public void GenerateSignature(string secret)
         {
             // get request as json string
-            var requestString = JsonSerializer.Serialize(Request);
+            var options = new JsonSerializerOptions
+            {
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+            };
+            var requestString = JsonSerializer.Serialize(Request, options);
 
             // convert to bytes
             var encoding = new ASCIIEncoding();
@@ -32,12 +36,16 @@ namespace PocketPaymentSharp
 
             using (var hmac = new HMACSHA256(secretBytes))
                 hashBytes = hmac.ComputeHash(requestBytes);
-            Signature = BitConverter.ToString(hashBytes);
+            Signature = BitConverter.ToString(hashBytes).Replace("-", "").ToLower();
         }
 
         public string GetJson()
         {
-            return JsonSerializer.Serialize(this);
+            var options = new JsonSerializerOptions
+            {
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+            };
+            return JsonSerializer.Serialize(this, options);
         }
     }
 }
