@@ -11,6 +11,10 @@ namespace Samples
             var secret = Environment.GetEnvironmentVariable("POCKET_SECRET");
 
             var client = new PocketClient(clientId, secret, Platform.Test);
+        }
+
+        static void CheckAuthExample(PocketClient client)
+        {
             Console.WriteLine(client.CheckAuth());
         }
     }
