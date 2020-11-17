@@ -27,4 +27,4 @@ jobs:
         port: ${{ secrets.PORT }}
         key: ${{ secrets.KEY }}
         source: "app"
-        target: "/home/desmond/PocketApp"
+        target: "/home/${{ secrets.USERNAME }}/PocketApp"
