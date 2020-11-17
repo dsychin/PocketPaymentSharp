@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using PocketPaymentSharp;
 
 namespace Samples
@@ -23,12 +24,12 @@ namespace Samples
             }
 
             var client = new PocketClient(clientId, secret, Platform.Test);
-            CheckAuthExample(client);
+            CheckAuthExample(client).Wait();
         }
 
-        static void CheckAuthExample(PocketClient client)
+        static async Task CheckAuthExample(PocketClient client)
         {
-            Console.WriteLine(client.CheckAuth());
+            Console.WriteLine(await client.CheckAuthAsync());
         }
     }
 }
