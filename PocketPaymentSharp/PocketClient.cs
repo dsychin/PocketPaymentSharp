@@ -38,5 +38,28 @@ namespace PocketPaymentSharp
             response.EnsureSuccessStatusCode();
             return await response.Content.ReadAsStringAsync(); // return json for debugging
         }
+
+        public async Task<string> CheckPhoneAsync(string phone)
+        {
+            // build request
+            var payload = new RequestPayload(platform, clientId);
+            payload.Request.Header.Service = "pocket.checkphone";
+            payload.Request.Body = new CheckPhoneBody
+            {
+                Phone = phone
+            };
+            payload.GenerateSignature(secret);
+
+            var jsonPayload = payload.GetJson();
+
+            // submit request
+            var content = new StringContent(jsonPayload);
+            content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+            var response = await http.PostAsync(endpointUrl, content);
+
+            // print response
+            response.EnsureSuccessStatusCode();
+            return await response.Content.ReadAsStringAsync(); // return json for debugging
+        }
     }
 }
